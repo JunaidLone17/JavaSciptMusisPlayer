@@ -1,4 +1,3 @@
-const jsmediatags = window.jsmediatags;
 const playButton = document.getElementById('Play');
 const icon = document.getElementById('pause-icon');
 const songname = document.getElementById('song-name');
@@ -7,6 +6,7 @@ const prev = document.getElementById('Previous');
 const img = document.getElementById('gifplayer');
 const volumerange = document.getElementById('myRange');
 const timertouch = document.getElementById('timer');
+const timestamp = document.getElementById('timestamp')
 var index = 0;
 img.setAttribute('src','stopped.png')
 
@@ -33,30 +33,16 @@ volumerange.addEventListener("input", function (event) {
     event.preventDefault();
     var volumevalue = volumerange.value/100;
     audio.volume = volumevalue;
-    console.log(volumevalue);
     
     
 })
 
-forward.addEventListener("click", function (event) {
-    event.preventDefault();
-    index = index + 1;
-    if (index == 9) {
-        index = 0;  
-    }
-    audio.pause();
-    audio = new Audio(songs[index].Path)
-    audio.play();
-    songname.innerText = songs[index].Name;
-    isplaying = true;
-
-});
+forward.addEventListener("click", forwardtrack);
 prev.addEventListener("click", function () {
     index = index - 1;
     if (index < 0) {
         index = 8;
     }
-    console.log(index);
     audio.pause();
     audio = new Audio(songs[index].Path)
     audio.play();
@@ -86,7 +72,27 @@ function Play(event) {
         }
 
 }
+function forwardtrack() {
+    index = index + 1;
+    if (index == 9) {
+        index = 0;  
+    }
+    audio.pause();
+    audio = new Audio(songs[index].Path)
+    audio.play();
+    songname.innerText = songs[index].Name;
+    isplaying = true;
+
+}
 var intervalId = window.setInterval(function () {
     /// call your function here
     timertouch.innerText = Math.floor(audio.currentTime / 60) + ":" + parseInt(audio.currentTime%60) + "/" + Math.floor(audio.duration/60) + " : "+ parseInt(audio.duration%60);
+    timestamp.value = Math.floor((audio.currentTime/audio.duration)*100)
 }, 1000);
+
+var intervalIdBeta = window.setInterval(function () {
+    if (audio.currentTime == audio.duration) {
+        console.log("check true");
+        forwardtrack(event);
+    }
+},1);

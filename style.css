@@ -52,7 +52,17 @@ body {
   margin: auto;
   padding: none;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-items: flex-start;
 }
+
 .slidecontainer {
-  margin: auto;
+  margin-top: 10px;
+  margin-left: 157px;
+}
+.duration {
+  margin-left: 15px;
+}
+.timeslider {
+  margin-left: 15px;
 }
