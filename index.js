@@ -21,7 +21,7 @@ var songs = [{
     },
     { Name: 'TwentyonePilots -  Stressed Out', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/3.mp3?alt=media&token=992ccd3a-b4c1-486a-967e-89b13704c849' },
     { Name: 'Masakali-Cover', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/4.mp3?alt=media&token=fe82856a-2448-4e51-b665-b63c7a4bff4b' },
-    { Name: 'Heathens - TwentyOnePilots', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/5.mp3?alt=media&token=9d8ebf93-53ea-458c-bd80-a15cf97b2f86' },
+    { Name: 'Heathens - TwentyOnePilots', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/5.mp3?alt=media&token=000226f7-31c0-4631-986a-1b1cce6bb79d' },
     { Name: 'Falling -Travis', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/6.mp3?alt=media&token=6a57cccd-79ab-4123-80b0-d8f12d5a6e2a' },
     { Name: 'Stay - Justin Bieber', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/7.mp3?alt=media&token=a244d74a-e312-41c9-a54f-af34fb8dfd35' },
     { Name: 'Everything at Once', Path: 'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/8.mp3?alt=media&token=e853415c-3f6f-4f0a-b657-1322f74bf634' },
