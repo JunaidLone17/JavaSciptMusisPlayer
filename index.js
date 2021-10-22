@@ -15,7 +15,7 @@ var isplaying = false;
 timestamp.addEventListener("input",seektime);
 function seektime(){
  var seektimevalue =  (timestamp.value/100)*audio.duration();
- audio.currenttime= seektimevalue;
+ audio.currenttime(seektimevalue);
 }
 var songs = [{
     'Name': 'Lemmino -  Earth',
