@@ -14,8 +14,8 @@ img.setAttribute('src','stopped.png')
 var isplaying = false;
 timestamp.addEventListener("input",seektime);
 function seektime(){
- var seektimevalue =  (timestamp.value/100)*audio.duration();
- audio.currenttime(seektimevalue);
+ var seektimevalue =  (timestamp.value/100)*audio.duration;
+ audio.currentTime=seektimevalue;
 }
 var songs = [{
     'Name': 'Lemmino -  Earth',
