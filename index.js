@@ -12,6 +12,11 @@ img.setAttribute('src','stopped.png')
 
 
 var isplaying = false;
+timestamp.addEventListener("input",seektime);
+function seektime(){
+ var seektimevalue =  (timestamp.value/100)*audio.duration();
+ audio.currenttime= seektimevalue;
+}
 var songs = [{
     'Name': 'Lemmino -  Earth',
     'Path':'https://firebasestorage.googleapis.com/v0/b/javascript-music-play.appspot.com/o/1.mp3?alt=media&token=2ecac121-7db6-4384-895b-03852a517b1d'
